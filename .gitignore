@@ -1,0 +1,50 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# frameworks and tools
+coverage/
+.turbo/
+.next/
+.vercel/
+.react-router/
+out/
+cdk.out/
+.wrangler/
+
+# production
+build/
+dist/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# env files (can opt-in for commiting if needed)
+.dev.vars
+.env
+.env*
+!.env.example
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# artifacts
+*~lock~
+*.zip
+*.tar.gz
+*.gz
+
+# development
+.ignore/
+.local/
+.dev/
+*.local.md
+*.dev.md

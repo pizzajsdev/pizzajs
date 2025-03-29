@@ -1,0 +1,22 @@
+name: 'Setup project'
+description: 'Sets up project and its dependencies'
+runs:
+  using: 'composite'
+  steps:
+    - uses: pnpm/action-setup@v4
+      with:
+        version: ${{ env.PNPM_VERSION }}
+        run_install: false
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        registry-url: https://npm.pkg.github.com
+        cache: 'pnpm'
+        cache-dependency-path: './pnpm-lock.yaml'
+
+    - shell: bash
+      run: |
+        pnpm env use --global 22
+        pnpm install -g bun@latest
+        pnpm install --frozen-lockfile

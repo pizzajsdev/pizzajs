@@ -1,0 +1,39 @@
+name: Check code quality
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+env:
+  APP_CI: true
+  APP_ENV: development
+  NODE_VERSION: 22.14.0
+  PNPM_VERSION: 10.7.0
+
+concurrency:
+  group: qualityCheck-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  qualityCheck:
+    name: Check code quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 'Setup project'
+        uses: ./.github/actions/setup-project
+        # NODE_AUTH_TOKEN is needed to install private Github packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PKG_REGISTRY_TOKEN }}
+
+      - name: 'Lint'
+        run: pnpm lint
+
+      - name: 'Run tests'
+        run: pnpm test
+
+      - name: 'Build project'
+        run: pnpm build

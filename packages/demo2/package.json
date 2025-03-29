@@ -1,0 +1,32 @@
+{
+  "name": "demo2-pkg",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Demo package",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsup --clean",
+    "postbuild": "publint",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "publint": "^0.3.9",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  }
+}

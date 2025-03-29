@@ -1,0 +1,39 @@
+{
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r --parallel run dev",
+    "format": "pnpm format:prettier && pnpm format:pkg",
+    "format:pkg": "bun run --bun sort-package-json package.json packages/*/package.json",
+    "format:prettier": "bun run --bun prettier --write README.md .github/ ./packages",
+    "lint": "pnpm typecheck && pnpm lint:prettier && pnpm lint:madge",
+    "lint:madge": "bun run --bun madge --circular --extensions ts,tsx packages/",
+    "lint:prettier": "bun run --bun prettier --check README.md .github/ ./packages",
+    "prepare": "pnpm format:pkg && husky",
+    "release": "pnpm run build && changeset publish",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "typecheck": "pnpm -r run typecheck",
+    "update-deps": "pnpm -r up --latest --save",
+    "postupdate-deps": "pnpm install && echo 'Installed dependencies again to apply any pnpm overrides.'",
+    "version-packages": "changeset version && pnpm format"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.28.1",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "husky": "^9.1.7",
+    "madge": "^8.0.0",
+    "prettier": "^3.5.3",
+    "sort-package-json": "^3.0.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  },
+  "packageManager": "pnpm@10.7.0",
+  "engines": {
+    "node": ">=22.11.0"
+  }
+}

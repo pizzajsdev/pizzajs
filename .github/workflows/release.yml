@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  APP_CI: true
+  APP_ENV: development
+  NODE_VERSION: 22.14.0
+  PNPM_VERSION: 10.7.0
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
+      pull-requests: write
+      issues: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-project
+        # NODE_AUTH_TOKEN is needed to install private Github packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'Lint'
+        run: pnpm lint
+      - name: 'Run tests'
+        run: pnpm test
+      - name: Create Release Pull Request or Publish to package registry
+        uses: changesets/action@v1
+        id: changesets
+        with:
+          # this expects you to have a script called release which does a build for your packages and calls changeset publish
+          publish: pnpm run release
+          version: pnpm run version-packages
+          createGithubReleases: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # this project is configured to use the Github Package Registry, to use npm you need to use a token generated in npmjs.com
+          NPM_TOKEN: ${{ secrets.PKG_REGISTRY_TOKEN }}
