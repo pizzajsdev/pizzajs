@@ -1,23 +1,6 @@
-# Template Monorepo Library
+# PizzaJS
 
-This is a template for a monorepo library.
-
-This stack uses:
-
-- Node.js (runtime)
-- Bundler: tsup + esbuild
-- Package manager: pnpm
-- Testing: vitest
-- Linting and formatting:
-  - tsconfig with stricter rules, including `erasableSyntaxOnly`
-  - prettier
-  - sort-package-json
-  - publint
-  - Commitlint
-  - Husky (for hooks)
-- Circular dependency detection: madge
-- Release management: changesets + Github Actions
-- Package Registry: Github
+Tools for building full-stack web apps with React Router 7+, and TypeScript.
 
 ## Features
 

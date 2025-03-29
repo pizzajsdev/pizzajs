@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "pizzajsdev/template-monorepo-lib" }],
+  "changelog": ["@changesets/changelog-github", { "repo": "pizzajsdev/pizzajs" }],
   "baseBranch": "main",
   "commit": false,
   "access": "public",
