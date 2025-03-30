@@ -34,7 +34,7 @@ jobs:
       - name: 'Lint'
         run: pnpm lint
       - name: 'Check missing changesets'
-        run: pnpm changeset status --since origin/main
+        run: pnpm changeset status
       - name: 'Test'
         run: pnpm test
       - name: Create Release Pull Request or Publish to package registry
