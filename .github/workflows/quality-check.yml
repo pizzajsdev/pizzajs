@@ -22,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: 'Setup project'
         uses: ./.github/actions/setup-project
@@ -32,7 +34,10 @@ jobs:
       - name: 'Lint'
         run: pnpm lint
 
-      - name: 'Run tests'
+      - name: 'Check missing changesets'
+        run: pnpm changeset status --since origin/main
+
+      - name: 'Test'
         run: pnpm test
 
       - name: 'Build project'
