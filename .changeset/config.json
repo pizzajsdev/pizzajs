@@ -2,9 +2,13 @@
   "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
   "changelog": ["@changesets/changelog-github", { "repo": "pizzajsdev/pizzajs" }],
   "baseBranch": "main",
-  "commit": true,
+  "commit": false,
   "access": "public",
   "updateInternalDependencies": "patch",
   "fixed": [],
-  "linked": []
+  "linked": [],
+  "snapshot": {
+    "useCalculatedVersion": true,
+    "prereleaseTemplate": "{tag}-{datetime}-{commit}"
+  }
 }

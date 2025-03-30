@@ -15,6 +15,8 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
+    name: 'Release'
+    if: github.repository == 'pizzajsdev/pizzajs'
     permissions:
       contents: write
       packages: write
@@ -31,7 +33,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Lint'
         run: pnpm lint
-      - name: 'Run tests'
+      - name: 'Check missing changesets'
+        run: pnpm changeset status
+      - name: 'Test'
         run: pnpm test
       - name: Create Release Pull Request or Publish to package registry
         uses: changesets/action@v1

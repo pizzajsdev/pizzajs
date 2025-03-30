@@ -32,7 +32,10 @@ jobs:
       - name: 'Lint'
         run: pnpm lint
 
-      - name: 'Run tests'
+      - name: 'Check missing changesets'
+        run: pnpm changeset status
+
+      - name: 'Test'
         run: pnpm test
 
       - name: 'Build project'
