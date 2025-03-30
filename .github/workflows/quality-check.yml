@@ -35,7 +35,7 @@ jobs:
         run: pnpm lint
 
       - name: 'Check missing changesets'
-        run: pnpm changeset status
+        run: pnpm changeset status --since origin/main
 
       - name: 'Test'
         run: pnpm test
