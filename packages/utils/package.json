@@ -1,7 +1,7 @@
 {
   "name": "@pizzajsdev/utils",
   "version": "0.3.1",
-  "description": "Utility functions for PizzaJS.",
+  "description": "Utility functions for PizzaJS",
   "homepage": "https://github.com/pizzajsdev/pizzajs#readme",
   "bugs": {
     "url": "https://github.com//pizzajsdev/pizzajs/issues"
