@@ -1,5 +1,12 @@
 # @pizzajsdev/utils
 
+## 0.3.2
+
+### Patch Changes
+
+- [`caceea9`](https://github.com/pizzajsdev/pizzajs/commit/caceea9878d6cbbdbe44dcf66e6a7c4e5ea4d79a) Thanks
+  [@itsjavi](https://github.com/itsjavi)! - remove node_modules
+
 ## 0.3.1
 
 ### Patch Changes
