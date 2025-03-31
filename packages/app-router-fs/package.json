@@ -1,0 +1,52 @@
+{
+  "name": "@pizzajsdev/app-router-fs",
+  "version": "0.2.0",
+  "description": "A route collector heavily inspired by Next.js's App Router and compatible with React Router v7+",
+  "homepage": "https://github.com/pizzajsdev/pizzajs#readme",
+  "bugs": {
+    "url": "https://github.com//pizzajsdev/pizzajs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pizzajsdev/pizzajs.git"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./*": {
+      "import": {
+        "types": "./dist/*.d.ts",
+        "default": "./dist/*.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsup --clean",
+    "postbuild": "publint",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "publint": "^0.3.9",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "@react-router/dev": "^7.4.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  }
+}
