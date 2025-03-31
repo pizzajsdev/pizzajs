@@ -1,0 +1,66 @@
+{
+  "name": "@pizzajsdev/react-router-hono",
+  "version": "0.0.1",
+  "description": "React Router v7+ adapter for Hono, compatible with Node and Vercel servers.",
+  "homepage": "https://github.com/pizzajsdev/pizzajs#readme",
+  "bugs": {
+    "url": "https://github.com//pizzajsdev/pizzajs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pizzajsdev/pizzajs.git"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "./*": {
+      "import": {
+        "types": "./dist/*.d.ts",
+        "default": "./dist/*.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsup --clean",
+    "postbuild": "publint",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.0",
+    "@vercel/nft": "^0.29.2",
+    "esbuild": "^0.25.2",
+    "hono": "^4.7.5",
+    "minimatch": "^10.0.1",
+    "vite": "^6.2.4"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.4.1",
+    "@react-router/node": "^7.4.1",
+    "@types/node": "^22.13.14",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "isbot": "^5.1.25",
+    "publint": "^0.3.9",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.4.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "@react-router/node": "^7.4.1",
+    "isbot": "^5.1.25",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.4.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  }
+}

@@ -42,9 +42,3 @@ const routes = createRouterConfig(collectedRoutes)
 
 export default routes
 ```
-
-## Example Routes
-
-![image](https://github.com/user-attachments/assets/c763ce13-4774-432f-849c-171cd3745545)
-
-![image](https://github.com/user-attachments/assets/0424f543-22d8-4739-8fe5-aac171157a5b)
