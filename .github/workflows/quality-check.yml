@@ -10,7 +10,7 @@ env:
   APP_CI: true
   APP_ENV: development
   NODE_VERSION: 22.14.0
-  PNPM_VERSION: 10.7.0
+  PNPM_VERSION: 10.7.1
 
 concurrency:
   group: qualityCheck-${{ github.ref }}
