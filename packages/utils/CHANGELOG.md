@@ -1,5 +1,12 @@
 # @pizzajsdev/utils
 
+## 0.3.3
+
+### Patch Changes
+
+- [`1f57935`](https://github.com/pizzajsdev/pizzajs/commit/1f57935babfcea096740e555a32c0de20f26a833) Thanks
+  [@itsjavi](https://github.com/itsjavi)! - upgrade dependencies
+
 ## 0.3.2
 
 ### Patch Changes
