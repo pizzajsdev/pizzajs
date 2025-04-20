@@ -1,0 +1,54 @@
+{
+  "name": "@pizzajsdev/i18n",
+  "version": "0.3.3",
+  "description": "Internationalization utilities for React apps",
+  "homepage": "https://github.com/pizzajsdev/pizzajs#readme",
+  "bugs": {
+    "url": "https://github.com//pizzajsdev/pizzajs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pizzajsdev/pizzajs.git"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "./*": {
+      "import": {
+        "types": "./dist/*.d.ts",
+        "default": "./dist/*.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsup --clean",
+    "postbuild": "publint",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pizzajsdev/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "publint": "^0.3.12",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  }
+}
