@@ -31,6 +31,8 @@ jobs:
         # NODE_AUTH_TOKEN is needed to install private Github packages
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'Build project'
+        run: pnpm build
       - name: 'Lint'
         run: pnpm lint
       - name: 'Check missing changesets'

@@ -31,6 +31,9 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PKG_REGISTRY_TOKEN }}
 
+      - name: 'Build project'
+        run: pnpm build
+
       - name: 'Lint'
         run: pnpm lint
 
@@ -39,6 +42,3 @@ jobs:
 
       - name: 'Test'
         run: pnpm test
-
-      - name: 'Build project'
-        run: pnpm build
