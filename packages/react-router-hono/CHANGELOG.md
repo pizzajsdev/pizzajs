@@ -1,5 +1,12 @@
 # @pizzajsdev/react-router-hono
 
+## 0.3.0
+
+### Minor Changes
+
+- [`ab1dead`](https://github.com/pizzajsdev/pizzajs/commit/ab1deadc16387efc1353e9032a7ec4405dee5821) Thanks
+  [@itsjavi](https://github.com/itsjavi)! - fix automatic preset and improve docs
+
 ## 0.2.0
 
 ### Minor Changes
