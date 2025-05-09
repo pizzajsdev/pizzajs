@@ -42,8 +42,8 @@ importers:
   examples/basic:
     dependencies:
       '@pizzajsdev/app-router-fs':
-        specifier: ^0.2.2
-        version: 0.2.2(@react-router/dev@7.6.0(@react-router/serve@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)))
+        specifier: ^0.3.0
+        version: 0.3.0(@react-router/dev@7.6.0(@react-router/serve@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)))
       '@react-router/node':
         specifier: ^7.6.0
         version: 7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)
@@ -857,10 +857,10 @@ packages:
   '@open-draft/until@2.1.0':
     resolution: {integrity: sha512-U69T3ItWHvLwGg5eJ0n3I62nWuE6ilHlmz7zM0npLBRvPRd7e6NYmg54vvRtP5mZG7kZqZCFVdsTWo7BPtBujg==}
 
-  '@pizzajsdev/app-router-fs@0.2.2':
-    resolution: {integrity: sha512-5FBQAJeYLNdjw1gh31gsPMA1z+WTM2HmnNo6ZSxDBT28yX72WlblkG+/Y5Av7MXUwMrOi4fwYV37WuWT64fuCA==, tarball: https://npm.pkg.github.com/download/@pizzajsdev/app-router-fs/0.2.2/d4a4d4e06ec06d14ae3c05f43a3bf4665fe16711}
+  '@pizzajsdev/app-router-fs@0.3.0':
+    resolution: {integrity: sha512-cBlBQwxWk7en9UKiBRU5S6JFdLYjg6p54JilQdekIYNMtwXQ5hf903hK4VEU64NyDMK+LICtCefM7l6+I/4PLg==, tarball: https://npm.pkg.github.com/download/@pizzajsdev/app-router-fs/0.3.0/db306b5f3cdaccc4dcc14323649f31c866838107}
     peerDependencies:
-      '@react-router/dev': ^7.4.1
+      '@react-router/dev': ^7.6.0
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -4597,7 +4597,7 @@ snapshots:
 
   '@open-draft/until@2.1.0': {}
 
-  '@pizzajsdev/app-router-fs@0.2.2(@react-router/dev@7.6.0(@react-router/serve@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)))':
+  '@pizzajsdev/app-router-fs@0.3.0(@react-router/dev@7.6.0(@react-router/serve@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)))':
     dependencies:
       '@react-router/dev': 7.6.0(@react-router/serve@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2))
 
