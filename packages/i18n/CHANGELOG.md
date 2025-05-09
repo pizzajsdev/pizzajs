@@ -1,5 +1,16 @@
 # @pizzajsdev/i18n
 
+## 0.4.1
+
+### Patch Changes
+
+- [`ff43ad2`](https://github.com/pizzajsdev/pizzajs/commit/ff43ad218d2857fe7e789892d86a25c05e9eeff1) Thanks
+  [@itsjavi](https://github.com/itsjavi)! - fix local imports in builds
+
+- Updated dependencies
+  [[`ff43ad2`](https://github.com/pizzajsdev/pizzajs/commit/ff43ad218d2857fe7e789892d86a25c05e9eeff1)]:
+  - @pizzajsdev/utils@0.4.1
+
 ## 0.4.0
 
 ### Minor Changes
