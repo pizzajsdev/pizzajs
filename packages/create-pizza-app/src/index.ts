@@ -151,7 +151,7 @@ async function getContext(argv: string[]): Promise<Context> {
       pkgManager ??
         // npm, pnpm, Yarn, and Bun set the user agent environment variable that can be used
         // to determine which package manager ran the command.
-        (process.env.npm_config_user_agent ?? 'npm').split('/')[0],
+        (process.env.npm_config_user_agent ?? 'pnpm').split('/')[0],
     ),
     projectName,
     prompt,
@@ -493,7 +493,7 @@ const packageManagerExecScript: Record<PackageManager, string> = {
 }
 
 function validatePackageManager(pkgManager: string): PackageManager {
-  return packageManagerExecScript.hasOwnProperty(pkgManager) ? (pkgManager as PackageManager) : 'npm'
+  return packageManagerExecScript.hasOwnProperty(pkgManager) ? (pkgManager as PackageManager) : 'pnpm'
 }
 
 async function installDependencies({
@@ -616,7 +616,7 @@ ${color.arg("--no-motion")}         ${color.dim(`Disable animations in console o
 
 ${color.arg("--template <name>")}   ${color.dim(`The project template to use`)}
 ${color.arg("--[no-]install")}      ${color.dim(`Whether or not to install dependencies after creation`)}
-${color.arg("--package-manager")}   ${color.dim(`The package manager to use`)}
+${color.arg("--package-manager")}   ${color.dim(`The package manager to use (default: pnpm)`)}
 ${color.arg("--show-install-output")}   ${color.dim(`Whether to show the output of the install process`)}
 ${color.arg("--[no-]git-init")}     ${color.dim(`Whether or not to initialize a Git repository`)}
 ${color.arg("--yes, -y")}           ${color.dim(`Skip all option prompts and run setup`)}
