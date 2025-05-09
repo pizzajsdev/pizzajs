@@ -45,11 +45,11 @@ importers:
         specifier: ^1.14.1
         version: 1.14.1(hono@4.7.9)
       '@pizzajsdev/app-router-fs':
-        specifier: workspace:*
-        version: link:../../packages/app-router-fs
+        specifier: ^0.3.1
+        version: 0.3.1(@react-router/dev@7.6.0(@react-router/serve@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)))
       '@pizzajsdev/react-router-hono':
-        specifier: workspace:*
-        version: link:../../packages/react-router-hono
+        specifier: ^0.3.2
+        version: 0.3.2(@react-router/node@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(isbot@5.1.27)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       '@react-router/node':
         specifier: ^7.6.0
         version: 7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)
@@ -865,6 +865,20 @@ packages:
 
   '@open-draft/until@2.1.0':
     resolution: {integrity: sha512-U69T3ItWHvLwGg5eJ0n3I62nWuE6ilHlmz7zM0npLBRvPRd7e6NYmg54vvRtP5mZG7kZqZCFVdsTWo7BPtBujg==}
+
+  '@pizzajsdev/app-router-fs@0.3.1':
+    resolution: {integrity: sha512-++1qpHVUMzW0fHpWR2/RWVqJmDBimwUNC+2wpTRYF81R+lUyETDjPZFq3YkG4qim5x38yhJosiNBoUbiK8c8pw==, tarball: https://npm.pkg.github.com/download/@pizzajsdev/app-router-fs/0.3.1/9c6e0bc89d58bf5c269cc3b527cb3fbfaf898bf8}
+    peerDependencies:
+      '@react-router/dev': ^7.6.0
+
+  '@pizzajsdev/react-router-hono@0.3.2':
+    resolution: {integrity: sha512-dUz3LudytZnqxse1PikKfyFOgqq40+ZbMIX0OjZdGj81PnEsmBNRUWALTtCFGSWnyld/U8oZll4BlNVj/ceuMg==, tarball: https://npm.pkg.github.com/download/@pizzajsdev/react-router-hono/0.3.2/b5174bb6f2b3f3807cb6112a02f1389958d9b75e}
+    peerDependencies:
+      '@react-router/node': ^7.6.0
+      isbot: ^5.1.27
+      react: ^19.1.0
+      react-dom: ^19.1.0
+      react-router: ^7.6.0
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -4600,6 +4614,39 @@ snapshots:
       outvariant: 1.4.3
 
   '@open-draft/until@2.1.0': {}
+
+  '@pizzajsdev/app-router-fs@0.3.1(@react-router/dev@7.6.0(@react-router/serve@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)))':
+    dependencies:
+      '@react-router/dev': 7.6.0(@react-router/serve@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2))
+
+  '@pizzajsdev/react-router-hono@0.3.2(@react-router/node@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(isbot@5.1.27)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      '@hono/node-server': 1.14.1(hono@4.7.9)
+      '@react-router/node': 7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)
+      '@vercel/nft': 0.29.2(rollup@4.40.2)
+      esbuild: 0.25.4
+      hono: 4.7.9
+      isbot: 5.1.27
+      minimatch: 10.0.1
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+      react-router: 7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      vite: 6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)
+    transitivePeerDependencies:
+      - '@types/node'
+      - encoding
+      - jiti
+      - less
+      - lightningcss
+      - rollup
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - tsx
+      - yaml
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
