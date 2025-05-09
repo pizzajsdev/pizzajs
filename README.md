@@ -1,7 +1,7 @@
 # PizzaJS
 
 <p align="center">
-  <img src="https://github.com/pizzajsdev/pizzajs/blob/main/resources/logo-bg.png" alt="PizzaJS Logo" width="100" height="100">
+  <img src="https://github.com/pizzajsdev/pizzajs/blob/main/resources/logo.png" alt="PizzaJS Logo" width="100" height="100">
 </p>
 
 Libraries and tools for building full-stack web apps with React Router v7+ and TypeScript.
