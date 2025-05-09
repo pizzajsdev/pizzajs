@@ -41,24 +41,15 @@ importers:
 
   examples/basic:
     dependencies:
-      '@hono/node-server':
-        specifier: ^1.14.1
-        version: 1.14.1(hono@4.7.9)
       '@pizzajsdev/app-router-fs':
         specifier: ^0.3.0
         version: 0.3.0(@react-router/dev@7.6.0(@react-router/serve@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)))
-      '@pizzajsdev/react-router-hono':
-        specifier: ^0.2.0
-        version: 0.2.0(@react-router/node@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(isbot@5.1.27)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       '@react-router/node':
         specifier: ^7.6.0
         version: 7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)
       '@react-router/serve':
         specifier: ^7.6.0
         version: 7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)
-      hono:
-        specifier: ^4.7.9
-        version: 4.7.9
       isbot:
         specifier: ^5.1.27
         version: 5.1.27
@@ -870,15 +861,6 @@ packages:
     resolution: {integrity: sha512-cBlBQwxWk7en9UKiBRU5S6JFdLYjg6p54JilQdekIYNMtwXQ5hf903hK4VEU64NyDMK+LICtCefM7l6+I/4PLg==, tarball: https://npm.pkg.github.com/download/@pizzajsdev/app-router-fs/0.3.0/db306b5f3cdaccc4dcc14323649f31c866838107}
     peerDependencies:
       '@react-router/dev': ^7.6.0
-
-  '@pizzajsdev/react-router-hono@0.2.0':
-    resolution: {integrity: sha512-LTw1KPkNMJddvrZKQeUph6zBhBVBw1vT0hQv1dTYT8Pw/oAGS6ifBMdNMip5TAQULy3q7JNBbvFTFNKKzftOqA==, tarball: https://npm.pkg.github.com/download/@pizzajsdev/react-router-hono/0.2.0/6fad245ce086230b94015dd7d0f82222d31dbdbf}
-    peerDependencies:
-      '@react-router/node': ^7.6.0
-      isbot: ^5.1.27
-      react: ^19.1.0
-      react-dom: ^19.1.0
-      react-router: ^7.6.0
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -4618,35 +4600,6 @@ snapshots:
   '@pizzajsdev/app-router-fs@0.3.0(@react-router/dev@7.6.0(@react-router/serve@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)))':
     dependencies:
       '@react-router/dev': 7.6.0(@react-router/serve@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2))
-
-  '@pizzajsdev/react-router-hono@0.2.0(@react-router/node@7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@22.15.17)(isbot@5.1.27)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)':
-    dependencies:
-      '@hono/node-server': 1.14.1(hono@4.7.9)
-      '@react-router/node': 7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)
-      '@vercel/nft': 0.29.2(rollup@4.40.2)
-      esbuild: 0.25.4
-      hono: 4.7.9
-      isbot: 5.1.27
-      minimatch: 10.0.1
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
-      react-router: 7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      vite: 6.3.5(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)
-    transitivePeerDependencies:
-      - '@types/node'
-      - encoding
-      - jiti
-      - less
-      - lightningcss
-      - rollup
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-      - tsx
-      - yaml
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
