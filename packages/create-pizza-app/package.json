@@ -12,6 +12,7 @@
     "directory": "packages/create-pizza-app"
   },
   "license": "MIT",
+  "type": "commonjs",
   "exports": {
     "./package.json": "./package.json"
   },
