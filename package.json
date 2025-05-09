@@ -9,6 +9,7 @@
     "changeset:commit": "git add ./.changeset && git commit -m 'chore(docs): add changesets'",
     "changeset:release": "pnpm run build && changeset publish",
     "changeset:version-packages": "changeset version && pnpm format",
+    "cleanup": "rm -rf node_modules examples/*/node_modules packages/*/node_modules examples/*/.react-router packages/*/.react-router",
     "dev": "pnpm -r --parallel --filter @pizzajsdev/* run dev",
     "dev:examples": "pnpm -r --parallel --filter my-* run dev",
     "format": "pnpm format:prettier && pnpm format:pkg",
