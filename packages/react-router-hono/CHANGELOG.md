@@ -1,5 +1,12 @@
 # @pizzajsdev/react-router-hono
 
+## 0.3.1
+
+### Patch Changes
+
+- [`43a5212`](https://github.com/pizzajsdev/pizzajs/commit/43a5212abfe0cb8fd77b1a1049aa2742d53ddd20) Thanks
+  [@itsjavi](https://github.com/itsjavi)! - fix exports
+
 ## 0.3.0
 
 ### Minor Changes
