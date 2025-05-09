@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.14.1",
-    "@pizzajsdev/app-router-fs": "^0.3.0",
+    "@pizzajsdev/app-router-fs": "workspace:*",
     "@pizzajsdev/react-router-hono": "workspace:*",
     "@react-router/node": "^7.6.0",
     "@react-router/serve": "^7.6.0",

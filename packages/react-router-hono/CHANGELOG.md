@@ -1,5 +1,12 @@
 # @pizzajsdev/react-router-hono
 
+## 0.3.2
+
+### Patch Changes
+
+- [`ff43ad2`](https://github.com/pizzajsdev/pizzajs/commit/ff43ad218d2857fe7e789892d86a25c05e9eeff1) Thanks
+  [@itsjavi](https://github.com/itsjavi)! - fix local imports in builds
+
 ## 0.3.1
 
 ### Patch Changes
