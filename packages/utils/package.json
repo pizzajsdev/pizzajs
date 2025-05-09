@@ -33,10 +33,10 @@
   "dependencies": {
     "dayjs": "^1.11.13",
     "nanoid": "^5.1.5",
-    "zod": "^3.24.3"
+    "zod": "^3.24.4"
   },
   "devDependencies": {
-    "@types/node": "^22.15.3",
+    "@types/node": "^22.15.17",
     "publint": "^0.3.12",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3"
