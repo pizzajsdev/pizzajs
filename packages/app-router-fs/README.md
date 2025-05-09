@@ -37,7 +37,7 @@ Edit the `app/routes.ts` file to use the generated routes.
 import { collectRoutes } from '@pizzajsdev/app-router-fs'
 import { createRouterConfig } from '@pizzajsdev/app-router-fs/adapters/react-router'
 
-export const collectedRoutes = collectRoutes('app/routes', ['.tsx', '.ts', '.md', '.mdx'], process.cwd())
+export const collectedRoutes = collectRoutes('routes', ['.tsx', '.ts'], process.cwd() + '/app')
 const routes = createRouterConfig(collectedRoutes)
 
 export default routes
