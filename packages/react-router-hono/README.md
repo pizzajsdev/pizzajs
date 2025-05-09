@@ -6,7 +6,7 @@ React Router v7+ adapter for Hono, compatible with Node and Vercel servers.
 
 ```bash
 echo "@pizzajsdev:registry=https://npm.pkg.github.com" >> .npmrc
-pnpm add @pizzajsdev/react-router-hono
+pnpm add @pizzajsdev/react-router-hono hono @hono/node-server
 ```
 
 ## Usage
@@ -46,12 +46,13 @@ export const getLoadContext = async (ctx: Context<{ Bindings: HttpBindings }>) =
   const userAgent = req.headers.get('User-Agent')
 
   return {
+    // Example data:
     url,
     userAgent,
     cookie,
-    // other data, e.g.:
     // lang,
-    // session
+    // session,
+    // etc.
   }
 }
 
@@ -84,6 +85,28 @@ import { getLoadContext } from './context.server'
 
 export default await createHonoNodeServer({
   getLoadContext: getLoadContext,
+})
+```
+
+`vite.config.ts`:
+
+```ts
+import { reactRouterHonoDevServer } from '@pizzajsdev/react-router-hono/vite'
+import { reactRouter } from '@react-router/dev/vite'
+import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from 'vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+    // Add the Hono dev server plugin:
+    reactRouterHonoDevServer({
+      entryFile: 'server.node.ts',
+    }),
+    reactRouter(),
+    tsconfigPaths(),
+  ],
 })
 ```
 

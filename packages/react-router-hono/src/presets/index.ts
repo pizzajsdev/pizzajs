@@ -1,3 +1,4 @@
+import type { Preset } from '@react-router/dev/config'
 import { nodePreset } from './node/preset'
 import type { NodeVersion } from './types'
 import { vercelPreset } from './vercel/preset'
@@ -34,17 +35,16 @@ export function createAutomaticPreset(
     node: 'server.node.ts',
     vercel: 'server.vercel.ts',
   },
-) {
-  return [
-    process.env['VERCEL'] == '1'
-      ? vercelPreset({
-          regions: vercelRegions,
-          entryFile: entryFiles.vercel,
-          nodeVersion,
-        })
-      : nodePreset({
-          entryFile: entryFiles.node,
-          nodeVersion,
-        }),
-  ]
+): Preset {
+  const isVercel = process.env['VERCEL'] === '1'
+  return isVercel
+    ? vercelPreset({
+        regions: vercelRegions,
+        entryFile: entryFiles.vercel,
+        nodeVersion,
+      })
+    : nodePreset({
+        entryFile: entryFiles.node,
+        nodeVersion,
+      })
 }
