@@ -1,13 +1,13 @@
-import process from 'node:process'
-import url from 'node:url'
-import fs from 'node:fs'
-import path from 'node:path'
-import stream from 'node:stream'
-import { promisify } from 'node:util'
 import { fetch } from '@remix-run/web-fetch'
 import gunzip from 'gunzip-maybe'
-import tar from 'tar-fs'
+import fs from 'node:fs'
+import path from 'node:path'
+import process from 'node:process'
+import stream from 'node:stream'
+import url from 'node:url'
+import { promisify } from 'node:util'
 import { ProxyAgent } from 'proxy-agent'
+import tar from 'tar-fs'
 
 import { color, isUrl } from './utils'
 
@@ -27,6 +27,7 @@ export async function copyTemplate(
 
   /**
    * Valid templates are:
+   * - example project directory from https://github.com/pizzajsdev/pizzajs/tree/main/examples
    * - local file or directory on disk
    * - GitHub owner/repo shorthand
    * - GitHub owner/repo/directory shorthand
@@ -36,10 +37,20 @@ export async function copyTemplate(
 
   try {
     if (isLocalFilePath(template)) {
-      log(`Using the template from local file at "${template}"`)
+      log(`Using the template from local filesystem at "${template}"`)
       let filepath = template.startsWith('file://') ? url.fileURLToPath(template) : template
       let isLocalDir = await copyTemplateFromLocalFilePath(filepath, destPath)
       return isLocalDir ? { localTemplateDirectory: filepath } : undefined
+    }
+
+    if (isFolderName(template)) {
+      log(`Using a template from the https://github.com/pizzajsdev/pizzajs/tree/main/examples directory`)
+      await copyTemplateFromGithubRepoUrl(
+        `https://github.com/pizzajsdev/pizzajs/tree/main/examples/${template}`,
+        destPath,
+        options,
+      )
+      return
     }
 
     if (isGithubRepoShorthand(template)) {
@@ -85,6 +96,10 @@ function isLocalFilePath(input: string): boolean {
   } catch (_) {
     return false
   }
+}
+
+function isFolderName(input: string): boolean {
+  return !input.includes('/') && !input.includes('.') && !input.includes('\\')
 }
 
 async function copyTemplateFromRemoteTarball(url: string, destPath: string, options: CopyTemplateOptions) {

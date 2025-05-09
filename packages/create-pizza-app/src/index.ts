@@ -626,12 +626,16 @@ ${color.heading("Creating a new project")}:
 
 React Router projects are created from templates. A template can be:
 
+- a folder name from the https://github.com/pizzajsdev/pizzajs/tree/main/examples directory
 - a GitHub repo shorthand, :username/:repo or :username/:repo/:directory
 - the URL of a GitHub repo (or directory within it)
 - the URL of a tarball
 - a file path to a directory of files
 - a file path to a tarball
+
+Examples:
 ${[
+  "basic",
   "pizzajsdev/pizzajs/examples/basic",
   ":username/:repo",
   ":username/:repo/:directory",
