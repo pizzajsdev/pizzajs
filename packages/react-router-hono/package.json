@@ -1,6 +1,6 @@
 {
   "name": "@pizzajsdev/react-router-hono",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React Router v7+ adapter for Hono, compatible with Node and Vercel servers.",
   "homepage": "https://github.com/pizzajsdev/pizzajs#readme",
   "bugs": {

@@ -1,5 +1,12 @@
 # @pizzajsdev/utils
 
+## 0.4.0
+
+### Minor Changes
+
+- [`9cb89d6`](https://github.com/pizzajsdev/pizzajs/commit/9cb89d6c35870eaa0db3c67aea1713103f0b9313) Thanks
+  [@itsjavi](https://github.com/itsjavi)! - upgrade dependencies
+
 ## 0.3.3
 
 ### Patch Changes
