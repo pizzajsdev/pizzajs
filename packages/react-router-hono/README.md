@@ -17,9 +17,11 @@ pnpm add @pizzajsdev/react-router-hono hono @hono/node-server
 
 ```ts
 import type { Config } from '@react-router/dev/config'
-import { createAutomaticPreset } from '@pizzajsdev/react-router-hono/presets'
+import { createAutomaticPreset } from '@pizzajsdev/react-router-hono/presets/auto'
 
 export default {
+  // Automatically creates a React Router preset based on the environment. If it detects that it is running in Vercel,
+  // it will use the Vercel preset, otherwise it will use the Node preset.
   presets: [createAutomaticPreset()],
 } satisfies Config
 ```
