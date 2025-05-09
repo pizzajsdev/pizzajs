@@ -1,6 +1,6 @@
 {
   "name": "@pizzajsdev/app-router-fs",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A route collector heavily inspired by Next.js's App Router and compatible with React Router v7+",
   "homepage": "https://github.com/pizzajsdev/pizzajs#readme",
   "bugs": {

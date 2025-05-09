@@ -1,5 +1,16 @@
 # @pizzajsdev/i18n
 
+## 0.4.2
+
+### Patch Changes
+
+- [`eaa0fa0`](https://github.com/pizzajsdev/pizzajs/commit/eaa0fa044da641f1d8c2e9801e04562dbee37272) Thanks
+  [@itsjavi](https://github.com/itsjavi)! - convert to npm registry
+
+- Updated dependencies
+  [[`eaa0fa0`](https://github.com/pizzajsdev/pizzajs/commit/eaa0fa044da641f1d8c2e9801e04562dbee37272)]:
+  - @pizzajsdev/utils@0.4.2
+
 ## 0.4.1
 
 ### Patch Changes

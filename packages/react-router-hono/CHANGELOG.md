@@ -1,5 +1,12 @@
 # @pizzajsdev/react-router-hono
 
+## 0.3.3
+
+### Patch Changes
+
+- [`eaa0fa0`](https://github.com/pizzajsdev/pizzajs/commit/eaa0fa044da641f1d8c2e9801e04562dbee37272) Thanks
+  [@itsjavi](https://github.com/itsjavi)! - convert to npm registry
+
 ## 0.3.2
 
 ### Patch Changes
