@@ -5,7 +5,7 @@
   "commit": false,
   "access": "public",
   "updateInternalDependencies": "patch",
-  "ignore": ["create-pizza-app", "my-pizza-app"],
+  "ignore": [],
   "fixed": [],
   "linked": [],
   "snapshot": {
