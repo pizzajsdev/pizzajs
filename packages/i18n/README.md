@@ -5,7 +5,6 @@ Internationalization utilities for React apps.
 ## Setup
 
 ```bash
-echo "@pizzajsdev:registry=https://npm.pkg.github.com" >> .npmrc
 pnpm add @pizzajsdev/i18n
 ```
 

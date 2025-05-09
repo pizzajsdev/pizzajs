@@ -28,9 +28,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup-project
-        # NODE_AUTH_TOKEN is needed to install private Github packages
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: 'Build project'
         run: pnpm build
       - name: 'Lint'
@@ -51,4 +50,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # this project is configured to use the Github Package Registry, to use npm you need to use a token generated in npmjs.com
-          NPM_TOKEN: ${{ secrets.PKG_REGISTRY_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -44,9 +44,5 @@
   },
   "peerDependencies": {
     "@react-router/dev": "^7.6.0"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
   }
 }

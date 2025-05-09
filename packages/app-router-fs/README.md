@@ -23,7 +23,6 @@ Supports both `.ts` and `.tsx` files, depends if you use JSX inside or not.
 It requires React Router v7 or compatible.
 
 ```bash
-echo "@pizzajsdev:registry=https://npm.pkg.github.com" >> .npmrc
 pnpm add @pizzajsdev/app-router-fs
 ```
 

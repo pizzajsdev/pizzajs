@@ -11,9 +11,9 @@ runs:
     - uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
-        registry-url: https://npm.pkg.github.com
         cache: 'pnpm'
         cache-dependency-path: './pnpm-lock.yaml'
+        # registry-url: https://npm.pkg.github.com
 
     - shell: bash
       run: |

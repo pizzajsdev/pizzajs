@@ -5,7 +5,6 @@ React Router v7+ adapter for Hono, compatible with Node and Vercel servers.
 ## Setup
 
 ```bash
-echo "@pizzajsdev:registry=https://npm.pkg.github.com" >> .npmrc
 pnpm add @pizzajsdev/react-router-hono hono @hono/node-server
 ```
 
