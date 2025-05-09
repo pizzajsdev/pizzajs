@@ -1,0 +1,10 @@
+.DS_Store
+*.local
+
+node_modules/
+.local/
+dist/
+
+# React Router
+.react-router/
+build/
